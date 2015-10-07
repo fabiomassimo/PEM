@@ -31,7 +31,7 @@ module PEM
 
       def login
         Helper.log.info "Starting login with user '#{PEM.config[:username]}'"
-        Spaceship.login(PEM.config[:username], nil)
+        Spaceship.login(PEM.config[:username], PEM.config[:password])
         Spaceship.client.select_team
         Helper.log.info "Successfully logged in"
       end
